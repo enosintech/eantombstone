@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "nohemiBold" : "NohemiBlack, sans-serif",
+        "nohemiThin" : "NohemiThin, sans-serif",
+        "lausanne" : "Lausanne, sans-serif",
+        "poppins" : '"Poppins", sans-serif',
+      }
+    },
   },
   plugins: [],
 }

@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Lausanne;
+    src: url(/assets/fonts/Lausanne-Regular.otf);
+}
+
+@font-face {
+    font-family: NohemiBlack;
+    src: url(/assets/fonts/Nohemi-Bold.ttf);
+}
+
+@font-face {
+    font-family: NohemiThin;
+    src: url(/assets/fonts/Nohemi-Thin.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,4 +32,15 @@ body {
     height: 100vh;
     background-color: white;
     overflow-x: hidden;
+}
+
+.heroMainText {
+    inset: 0;
+    background-color: white;
+    color: #000;
+    mix-blend-mode: screen;
+}
+
+.stretch {
+    font-stretch: ultra-expanded;
 }
