@@ -9,12 +9,27 @@
 
 @font-face {
     font-family: NohemiBlack;
-    src: url(/assets/fonts/Nohemi-Bold.ttf);
+    src: url(/assets/fonts/Nohemi-Black.ttf);
 }
 
 @font-face {
     font-family: NohemiThin;
     src: url(/assets/fonts/Nohemi-Thin.ttf);
+}
+
+@font-face {
+    font-family: UniversLight;
+    src: url(/assets/fonts/UniversLight.ttf);
+}
+
+@font-face {
+    font-family: UniversRegular;
+    src: url(/assets/fonts/UniversRegular.ttf);
+}
+
+@font-face {
+    font-family: UniversBold;
+    src: url(/assets/fonts/UniversBold.ttf);
 }
 
 * {
@@ -41,6 +56,9 @@ body {
     mix-blend-mode: screen;
 }
 
-.stretch {
-    font-stretch: ultra-expanded;
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
+  

@@ -32,9 +32,8 @@ const Hero = () => {
             scrollTrigger: {
                 trigger: hero.current,
                 pin: true,
-                end: "bottom -700%",
+                end: "bottom -800%",
                 scrub: true,
-                snap: 1 / 6.35
             }
         })
 
@@ -72,7 +71,7 @@ const Hero = () => {
 
         tl.to(splitText[5], {
             y: 40,
-            x: -40,
+            x: -50,
             rotationZ: 20,
             ease: "power4.out",
         }, "<")
@@ -88,30 +87,146 @@ const Hero = () => {
         }, "<")
 
         tl.to(".disappear", {
-            scale: 0.5,
             opacity: 0,
+            rotationX: -50,
             ease: "power4.out"
         })
+
+        tl.to("#bookPrompt", {
+            opacity: 0,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to("#altBack", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
 
         tl.to(grow.current, {
             height: "100%",
             ease: "power4.out"
-        }, "<35%")
+        }, "<15%")
+
+        tl.to(".dadSaidText1", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".adviceBox1", {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            backgroundColor: "rgb(82,82,82)",
+            ease: "power4.out"
+        }, "<")
 
         tl.to(".first", {
             height: 0,
             ease: "power4.out"
         })
 
+        tl.to(".adviceBox2", {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            backgroundColor: "rgb(82,82,82)",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".saidText1", {
+            opacity: 0,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".adviceBox1", {
+            x: -20,
+            y: -20,
+            rotate: -25,
+            backgroundColor: "black",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".saidText2", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".dadSaidText2", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
+
         tl.to(".second", {
             height: 0,
             ease: "power4.out"
         })
 
+        tl.to(".adviceBox2", {
+            x: 20,
+            y: -30,
+            rotate: 20,
+            backgroundColor: "black",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".adviceBox3", {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            backgroundColor: "rgb(82,82,82)",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".saidText2", {
+            opacity: 0,
+            ease: "power4.out",
+        }, "<")
+
+        tl.to(".saidText3", {
+            opacity: 1,
+            ease: "power4.out",
+        }, "<")
+
+        tl.to(".dadSaidText3", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
+
         tl.to(".third", {
             height: 0,
             ease: "power4.out"
         })
+
+        tl.to(".adviceBox3", {
+            x: -20,
+            y: 30,
+            rotate: 20,
+            backgroundColor: "black",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".adviceBox4", {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            backgroundColor: "rgb(82,82,82)",
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".saidText3", {
+            opacity: 0,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".saidText4", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
+
+        tl.to(".dadSaidText4", {
+            opacity: 1,
+            ease: "power4.out"
+        }, "<")
 
         tl.to(".fourth", {
             opacity: 0,
@@ -120,28 +235,96 @@ const Hero = () => {
 
         tl.to(grow.current, {
             width: "100%",
-            borderRadius: 60,
+            borderRadius: 0,
             ease: "power4.out"
         }, "<")
 
-        tl.to("#bookPrompt", {
-            opacity: 0,
-            ease: "power4.out"
+        tl.to("#scrollprompt", {
+            filter: "invert(100%)",
         }, "<")
+
+        tl.to("#scrollDiv", {
+            bottom: 35
+        }, "<")
+
+        tl.to("#altBack", {
+            xPercent: 50,
+            ease: "power4.out",
+            opacity: 0
+        }, "<")
+
+        tl.to(".waterText", {
+            opacity: 1,
+            ease: "power4.out"
+        })
       
     }, [])
 
   return (
-    <div ref={hero} className="h-[100vh] w-full p-10 relative">
-        <div ref={grow} className="bg-red-500 w-[45%] h-0 rounded-[30px] relative overflow-hidden shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-            <div className="first rounded-[30px] w-full h-full absolute top-0 left-0 z-[5] bg-yellow-500"></div>
-            <div className="second rounded-[30px] w-full h-full absolute top-0 left-0 z-[4] bg-red-500"></div>
-            <div className="third rounded-[30px] w-full h-full absolute top-0 left-0 z-[3] bg-purple-500"></div>
-            <div className="fourth rounded-[30px] w-full h-full absolute top-0 left-0 z-[2] bg-green-500"></div>
-            <div className="fifth rounded-[30px] w-full h-full absolute top-0 left-0 z-[1]">
+    <div ref={hero} className="h-[100vh] w-full relative">
+        <div ref={grow} className="bg-red-500 w-[45%] h-0 relative overflow-hidden">
+            <div className="first w-full h-full absolute top-0 left-0 z-[5] bg-yellow-500"></div>
+            <div className="second w-full h-full absolute top-0 left-0 z-[4] bg-red-500"></div>
+            <div className="third w-full h-full absolute top-0 left-0 z-[3] bg-purple-500"></div>
+            <div className="fourth w-full h-full absolute top-0 left-0 z-[2] bg-green-500"></div>
+            <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center">
                 <video className="w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
                     <source src={heroVideoMain} type="video/mp4" />
                 </video>
+                <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[40%] text-white">
+                    <p className="tracking-tight text-xl font-extralight">Excerpt from: <em className="font-semibold underline">Because I could not stop for death, He kindly stopped for me </em> by Emily Dickinson</p>
+                    <p className="text-3xl font-bold tracking-tight text-justify">
+                        Because I could not stop for Death –
+                        He kindly stopped for me –
+                        The Carriage held but just Ourselves –
+                        And Immortality.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="altBack" className="absolute opacity-0 w-[100vw] h-[100vh] top-0 left-0 flex justify-end">
+            <div className="w-1/2 h-full flex flex-col items-center justify-evenly">
+                <div className="w-[90%] h-[10%]">
+                    <p className="text-xl font-bold text-neutral-600 tracking-tight text-justify">My Father was known by the <span className="underline">Central Statistical Office</span> as, <span className="text-black font-black">Enos Arthur Nsamba</span>. He lived to be 79 years old. I always think that it must be incredibly difficult to allow yourself to die once time throws all its might to getting you there, but I think my father had a lot behind him that <em>maybe</em> made it easier.</p>
+                </div>
+                <div className="flex flex-col gap-y-20 items-center justify-center w-[90%] h-[70%]">
+                    <div className="w-[70%] h-[70%] flex justify-evenly flex-wrap text-white">
+                        <div className="p-3 flex flex-col adviceBox1 w-[45%] h-[45%] bg-black rounded-[25px] -translate-x-4 -translate-y-3 -rotate-[25deg] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <p className="dadSaidText1 opacity-0 font-light tracking-tight text-[12px]">My Dad loved...</p>
+                            <p className="text-lg font-bold tracking-tight">Binge watching Nigerian movies, .</p>
+                        </div>
+                        <div className="p-3 flex flex-col adviceBox2 w-[45%] h-[45%] bg-black rounded-[25px] translate-x-4 -translate-y-3 rotate-[10deg] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <p className="dadSaidText2 opacity-0 font-light tracking-tight text-[12px]">My Dad Said...</p>
+                            <p className="text-lg font-bold tracking-tight">Expect other drivers on the road to make a mistake and hypothesize your reactions.</p>
+                        </div>
+                        <div className="p-3 flex flex-col adviceBox3 w-[45%] h-[45%] bg-black rounded-[25px] -translate-x-2 translate-y-10 rotate-[15deg] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <p className="dadSaidText3 opacity-0  font-light tracking-tight text-[12px]">My Dad...</p>
+                            <p className="text-lg font-bold tracking-tight">Was on the first Zambian Airways flight from Lusaka to New York.</p>
+                        </div>
+                        <div className="p-3 flex flex-col adviceBox4 w-[45%] h-[45%] bg-black rounded-[25px] rotate-[20deg] translate-y-4 translate-x-3 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <p className="dadSaidText4 opacity-0  font-light tracking-tight text-[12px]">My Dad died and...</p>
+                            <p className="text-lg font-bold tracking-tight">Left an unending turbulence in my life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="relative w-[90%] h-[5%]">
+                    <div className="saidText1 w-full h-full top-0 left-0 absolute flex items-center justify-between">
+                        <p className="text-lg font-light tracking-tight">Last day I physically saw my dad</p>
+                        <p className="text-lg font-bold tracking-tight">9th December, 2020</p>
+                    </div>
+                    <div className="saidText2 w-full h-full top-0 left-0 absolute opacity-0 flex items-center justify-between">
+                        <p className="text-lg font-light tracking-tight">My dad in early fatherhood</p>
+                        <p className="text-lg font-bold tracking-tight">16 January, 1984</p>
+                    </div>
+                    <div className="saidText3 w-full h-full top-0 left-0 absolute opacity-0 flex items-center justify-between">
+                        <p className="text-lg font-light tracking-tight">Last day I physically saw my dad</p>
+                        <p className="text-lg font-bold tracking-tight">9th December, 2020</p>
+                    </div>
+                    <div className="saidText4 w-full h-full top-0 left-0 absolute opacity-0 flex items-center justify-between">
+                        <p className="text-lg font-light tracking-tight">My dad in early fatherhood</p>
+                        <p className="text-lg font-bold tracking-tight">16 January, 1984</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div className="absolute w-[100vw] h-[100vh] top-0 left-0 flex flex-col">
@@ -149,18 +332,18 @@ const Hero = () => {
                 <video className="hero-bg-video w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
                     <source src={heroVideoMain} type="video/mp4" />
                 </video>
-                <p className="subtext absolute top-52 left-[106px] z-20 text-black font-extralight tracking-tight text-3xl">Celebrating the life of</p>
+                <p className="subtext absolute top-56 left-[100px] z-20 text-black font-extralight tracking-tight text-3xl">Dealing with the Loss of</p>
                 <p className="heroMainText text-[390px] tracking-tighter select-none absolute leading-none flex items-center justify-center gap-x-14 font-poppins font-black"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                <p className="subtext absolute bottom-48 right-[70px] z-20 text-black font-poppins font-[800] tracking-tight text-5xl"> Dec 43' <span className="font-[200]">—</span> June 22'</p>
+                <p className="subtext absolute bottom-48 right-[70px] z-20 text-black font-black tracking-tighter text-5xl"> Dec 43' <span className="font-[200]">—</span> June 22'</p>
                 <p className="surname absolute bottom-48 text-black font-poppins font-[900] text-2xl tracking-tight opacity-0">NSAMBA</p>
             </div>
         </div>
-        <div className="absolute w-full h-[5%] bottom-7 left-0 pointer-events-none flex items-center justify-center">
+        <div id="scrollDiv" className="absolute z-50 w-full h-[5%] bottom-7 left-0 pointer-events-none flex items-center justify-center">
             <img id="scrollprompt" src={chevronIcon} className="size-5 -translate-y-3 opacity-0" alt="chevron icon" />
         </div>
-        <a id="bookPrompt" className="absolute top-3 right-10 flex items-center gap-x-2 hover:opacity-75 active:opacity-50 cursor-pointer select-none">
-            <p className="font-poppins font-extrabold tracking-tighter text-xl">GET EBOOK</p>
-            <img src={boldArrowImg} className="size-5 -rotate-45"/>
+        <a id="bookPrompt" className="absolute top-3 right-10 bg-black p-3 px-4 rounded-full text-white flex items-center gap-x-2 hover:opacity-75 active:opacity-50 cursor-pointer select-none shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <p className="font-black tracking-tighter text-xl">GET EBOOK</p>
+            <img src={boldArrowImg} className="size-5 -rotate-45 invert"/>
         </a>
     </div>
   )
