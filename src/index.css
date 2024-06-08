@@ -49,6 +49,10 @@ body {
     overflow-x: hidden;
 }
 
+.direction {
+    direction: rtl;
+}
+
 .heroMainText {
     inset: 0;
     background-color: white;

@@ -40,76 +40,63 @@ const Hero = () => {
         tl.to(splitText[0], {
             y: -40,
             x: 60,
-            ease: "power4.out",
         })
 
         tl.to(splitText[1], {
             y: 40,
             x: 0,
-            ease: "power4.out",
         }, "<")
 
         tl.to(splitText[2], {
             y: -40,
             x: -20,
-            ease: "power4.out",
         }, "<")
 
         tl.to(splitText[3], {
             y: 0,
             x: -40,
             rotationZ: 20,
-            ease: "power4.out",
         }, "<")
 
         tl.to(splitText[4], {
             y: 0,
             x: -40,
             rotationZ: -20,
-            ease: "power4.out",
         }, "<")
 
         tl.to(splitText[5], {
             y: 40,
             x: -50,
             rotationZ: 20,
-            ease: "power4.out",
         }, "<")
 
         tl.to(".subtext", {
             opacity: 0,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".surname", {
             opacity: 1,
-            ease: "power4.out",
         }, "<")
 
         tl.to(".disappear", {
             opacity: 0,
             rotationX: -50,
-            ease: "power4.out"
         })
 
         tl.to("#bookPrompt", {
             opacity: 0,
-            ease: "power4.out"
         }, "<")
 
         tl.to("#altBack", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(grow.current, {
             height: "100%",
-            ease: "power4.out"
         }, "<15%")
 
         tl.to(".dadSaidText1", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".adviceBox1", {
@@ -117,7 +104,6 @@ const Hero = () => {
             y: 0,
             rotate: 0,
             backgroundColor: "rgb(82,82,82)",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".first", {
@@ -130,12 +116,10 @@ const Hero = () => {
             y: 0,
             rotate: 0,
             backgroundColor: "rgb(82,82,82)",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".saidText1", {
             opacity: 0,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".adviceBox1", {
@@ -143,17 +127,14 @@ const Hero = () => {
             y: -20,
             rotate: -25,
             backgroundColor: "black",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".saidText2", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".dadSaidText2", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".second", {
@@ -166,7 +147,6 @@ const Hero = () => {
             y: -30,
             rotate: 20,
             backgroundColor: "black",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".adviceBox3", {
@@ -174,22 +154,18 @@ const Hero = () => {
             y: 0,
             rotate: 0,
             backgroundColor: "rgb(82,82,82)",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".saidText2", {
             opacity: 0,
-            ease: "power4.out",
         }, "<")
 
         tl.to(".saidText3", {
             opacity: 1,
-            ease: "power4.out",
         }, "<")
 
         tl.to(".dadSaidText3", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".third", {
@@ -202,7 +178,6 @@ const Hero = () => {
             y: 30,
             rotate: 20,
             backgroundColor: "black",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".adviceBox4", {
@@ -210,33 +185,27 @@ const Hero = () => {
             y: 0,
             rotate: 0,
             backgroundColor: "rgb(82,82,82)",
-            ease: "power4.out"
         }, "<")
 
         tl.to(".saidText3", {
             opacity: 0,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".saidText4", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".dadSaidText4", {
             opacity: 1,
-            ease: "power4.out"
         }, "<")
 
         tl.to(".fourth", {
             opacity: 0,
-            ease: "power4.out"
         })
 
         tl.to(grow.current, {
             width: "100%",
             borderRadius: 0,
-            ease: "power4.out"
         }, "<")
 
         tl.to("#scrollprompt", {
@@ -249,13 +218,11 @@ const Hero = () => {
 
         tl.to("#altBack", {
             xPercent: 50,
-            ease: "power4.out",
             opacity: 0
         }, "<")
 
         tl.to(".waterText", {
             opacity: 1,
-            ease: "power4.out"
         })
       
     }, [])
@@ -268,16 +235,16 @@ const Hero = () => {
             <div className="third w-full h-full absolute top-0 left-0 z-[3] bg-purple-500"></div>
             <div className="fourth w-full h-full absolute top-0 left-0 z-[2] bg-green-500"></div>
             <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center">
-                <video className="w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
+                <video key={heroVideoMain} className="w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
                     <source src={heroVideoMain} type="video/mp4" />
                 </video>
-                <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[40%] text-white">
-                    <p className="tracking-tight text-xl font-extralight">Excerpt from: <em className="font-semibold underline">Because I could not stop for death, He kindly stopped for me </em> by Emily Dickinson</p>
-                    <p className="text-3xl font-bold tracking-tight text-justify">
+                <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[60%] text-white">
+                    <p className="tracking-tight font-extralight text-xl">Excerpt from: <em className="font-semibold">Because I could not stop for death, He kindly stopped for me </em> by Emily Dickinson</p>
+                    <p className="text-5xl font-bold tracking-tight text-justify">
                         Because I could not stop for Death –
                         He kindly stopped for me –
-                        The Carriage held but just Ourselves –
-                        And Immortality.
+                        The Carriage held but just Ourselves —
+                        <em> And Immortality.</em>
                     </p>
                 </div>
             </div>
@@ -285,7 +252,7 @@ const Hero = () => {
         <div id="altBack" className="absolute opacity-0 w-[100vw] h-[100vh] top-0 left-0 flex justify-end">
             <div className="w-1/2 h-full flex flex-col items-center justify-evenly">
                 <div className="w-[90%] h-[10%]">
-                    <p className="text-xl font-bold text-neutral-600 tracking-tight text-justify">My Father was known by the <span className="underline">Central Statistical Office</span> as, <span className="text-black font-black">Enos Arthur Nsamba</span>. He lived to be 79 years old. I always think that it must be incredibly difficult to allow yourself to die once time throws all its might to getting you there, but I think my father had a lot behind him that <em>maybe</em> made it easier.</p>
+                    <p className="relative z-[9999] text-xl font-bold text-neutral-500 tracking-tight text-justify">My Father was known by the <span className="text-neutral-800">Central Statistical Office</span> as, <span className="text-black font-black">Enos Arthur Nsamba</span>. He lived to be 79 years old. I always think that it must be incredibly difficult to allow yourself to die once time throws all its might to getting you there, but I think my father had a lot behind him that <em>maybe</em> made it easier.</p>
                 </div>
                 <div className="flex flex-col gap-y-20 items-center justify-center w-[90%] h-[70%]">
                     <div className="w-[70%] h-[70%] flex justify-evenly flex-wrap text-white">
@@ -329,16 +296,25 @@ const Hero = () => {
         </div>
         <div className="absolute w-[100vw] h-[100vh] top-0 left-0 flex flex-col">
             <div className="disappear w-full h-full flex flex-col items-center justify-center relative">
-                <video className="hero-bg-video w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
+                {/* <video className="hero-bg-video w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
                     <source src={heroVideoMain} type="video/mp4" />
                 </video>
-                <p className="subtext absolute top-56 left-[100px] z-20 text-black font-extralight tracking-tight text-3xl">Dealing with the Loss of</p>
-                <p className="heroMainText text-[390px] tracking-tighter select-none absolute leading-none flex items-center justify-center gap-x-14 font-poppins font-black"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                <p className="subtext absolute bottom-48 right-[70px] z-20 text-black font-black tracking-tighter text-5xl"> Dec 43' <span className="font-[200]">—</span> June 22'</p>
-                <p className="surname absolute bottom-48 text-black font-poppins font-[900] text-2xl tracking-tight opacity-0">NSAMBA</p>
+                <p className="subtext absolute top-56 left-[100px] z-20 text-black font-extralight tracking-tight text-3xl">In Loving Memory of</p>
+                <p className="heroMainText text-[23.3vw] tracking-tighter select-none absolute leading-none flex items-center justify-center gap-x-14 font-poppins font-black"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
+                <p className="subtext absolute bottom-48 right-[70px] z-20 text-black font-poppins font-black tracking-tight text-5xl"> Dec 43' <span className="font-[200]">—</span> June 22'</p>
+                <p className="surname absolute bottom-48 text-black font-poppins font-[900] text-2xl tracking-tight opacity-0">NSAMBA</p> */}
+                <div className="w-full h-[65%] bg-red-500"></div>
+                <div className="w-full h-[35%] flex items-center justify-center">
+                    <div className="w-fit h-[75%] flex flex-col relative">
+                        <p className="subtext pl-2 font-extralight tracking-tight text-lg">In Loving Memory of</p>
+                        <p className="text-[8vw] font-poppins font-black tracking-tighter leading-none"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
+                        <p className="subtext w-full flex items-center justify-end font-poppins font-black tracking-tight text-2xl">Dec 43' <span>—</span> June 22'</p>
+                        <p className="surname absolute text-center w-full bottom-8 font-poppins font-black tracking-tight opacity-0">NSAMBA</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="scrollDiv" className="absolute z-50 w-full h-[5%] bottom-7 left-0 pointer-events-none flex items-center justify-center">
+        <div id="scrollDiv" className="absolute z-50 w-full h-[5%] bottom-3 left-0 pointer-events-none flex items-center justify-center">
             <img id="scrollprompt" src={chevronIcon} className="size-5 -translate-y-3 opacity-0" alt="chevron icon" />
         </div>
         <a id="bookPrompt" className="absolute top-3 right-10 bg-black p-3 px-4 rounded-full text-white flex items-center gap-x-2 hover:opacity-75 active:opacity-50 cursor-pointer select-none shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
@@ -349,4 +325,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
