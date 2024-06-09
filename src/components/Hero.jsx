@@ -1,10 +1,14 @@
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import React, { useRef, Suspense, useEffect } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 
 import { boldArrowImg, chevronIcon, heroVideoMain } from "../lib";
 import { noTriggerToAnimations } from "../utils/animations";
+import Model from "./Scene";
+import Lights from "./Lights";
 
 const Hero = () => {
     const hero = useRef(null);
@@ -38,17 +42,17 @@ const Hero = () => {
         })
 
         tl.to(splitText[0], {
-            y: -40,
-            x: 60,
+            y: -25,
+            x: 40,
         })
 
         tl.to(splitText[1], {
-            y: 40,
+            y: 25,
             x: 0,
         }, "<")
 
         tl.to(splitText[2], {
-            y: -40,
+            y: -25,
             x: -20,
         }, "<")
 
@@ -65,7 +69,7 @@ const Hero = () => {
         }, "<")
 
         tl.to(splitText[5], {
-            y: 40,
+            y: 15,
             x: -50,
             rotationZ: 20,
         }, "<")
@@ -80,7 +84,7 @@ const Hero = () => {
 
         tl.to(".disappear", {
             opacity: 0,
-            rotationX: -50,
+            yPercent: 100
         })
 
         tl.to("#bookPrompt", {
@@ -218,7 +222,7 @@ const Hero = () => {
 
         tl.to("#altBack", {
             xPercent: 50,
-            opacity: 0
+            opacity: 0,
         }, "<")
 
         tl.to(".waterText", {
@@ -294,22 +298,26 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        <div className="absolute w-[100vw] h-[100vh] top-0 left-0 flex flex-col">
-            <div className="disappear w-full h-full flex flex-col items-center justify-center relative">
-                {/* <video className="hero-bg-video w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
-                    <source src={heroVideoMain} type="video/mp4" />
-                </video>
-                <p className="subtext absolute top-56 left-[100px] z-20 text-black font-extralight tracking-tight text-3xl">In Loving Memory of</p>
-                <p className="heroMainText text-[23.3vw] tracking-tighter select-none absolute leading-none flex items-center justify-center gap-x-14 font-poppins font-black"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                <p className="subtext absolute bottom-48 right-[70px] z-20 text-black font-poppins font-black tracking-tight text-5xl"> Dec 43' <span className="font-[200]">—</span> June 22'</p>
-                <p className="surname absolute bottom-48 text-black font-poppins font-[900] text-2xl tracking-tight opacity-0">NSAMBA</p> */}
-                <div className="w-full h-[65%] bg-red-500"></div>
-                <div className="w-full h-[35%] flex items-center justify-center">
-                    <div className="w-fit h-[75%] flex flex-col relative">
-                        <p className="subtext pl-2 font-extralight tracking-tight text-lg">In Loving Memory of</p>
-                        <p className="text-[8vw] font-poppins font-black tracking-tighter leading-none"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                        <p className="subtext w-full flex items-center justify-end font-poppins font-black tracking-tight text-2xl">Dec 43' <span>—</span> June 22'</p>
-                        <p className="surname absolute text-center w-full bottom-8 font-poppins font-black tracking-tight opacity-0">NSAMBA</p>
+        <div className="absolute w-[100vw] h-[100vh] top-0 left-0 flex flex-col overflow-visible">
+            <div className="disappear w-full h-full flex flex-col items-center justify-end relative overflow-visible">
+                <div className="w-full h-full absolute flex items-center justify-center overflow-visible">
+                    <div className="h-full w-full overflow-visible">
+                        <Canvas 
+                            className="w-full h-full overflow-visible"
+                        >
+                            <ambientLight intensity={1} />
+                            <Lights />
+                            <OrbitControls enableZoom={false} enableRotate={true} />
+                            <Model />
+                        </Canvas>
+                    </div>
+                </div>
+                <div className="w-full h-[50%] flex items-center justify-center">
+                    <div className="w-fit h-[75%] flex flex-col relative translate-y-14">
+                        <p className="w-full text-center font-medium tracking-tight text-xl subtext">REMEMBERING</p>
+                        <p className="text-[10vw] px-2 font-slussen leading-none"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
+                        <p className="w-full text-center mt-1 font-light tracking-tight text-xl subtext">DEC 43' — JUN 22'</p>
+                        <p className="surname absolute w-full text-center opacity-0 bottom-20 font-light tracking-tight text-xl">NSAMBA</p>
                     </div>
                 </div>
             </div>
@@ -317,10 +325,6 @@ const Hero = () => {
         <div id="scrollDiv" className="absolute z-50 w-full h-[5%] bottom-3 left-0 pointer-events-none flex items-center justify-center">
             <img id="scrollprompt" src={chevronIcon} className="size-5 -translate-y-3 opacity-0" alt="chevron icon" />
         </div>
-        <a id="bookPrompt" className="absolute top-3 right-10 bg-black p-3 px-4 rounded-full text-white flex items-center gap-x-2 hover:opacity-75 active:opacity-50 cursor-pointer select-none shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-            <p className="font-black tracking-tighter text-xl">GET EBOOK</p>
-            <img src={boldArrowImg} className="size-5 -rotate-45 invert"/>
-        </a>
     </div>
   )
 }

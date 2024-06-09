@@ -14,6 +14,7 @@ export default {
         "universBold" : "UniversBold, sans-serif",
         "universReg" : "UniversRegular, sans-serif",
         "universLight" : "UniversLight, sans-serif",
+        "slussen" : "slussen, sans-seirf"
       }
     },
   },

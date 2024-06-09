@@ -32,6 +32,11 @@
     src: url(/assets/fonts/UniversBold.ttf);
 }
 
+@font-face {
+    font-family: slussen;
+    src: url(/assets/fonts/SlussenExpandedBlack.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -64,5 +69,9 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
+}
+
+.stretch {
+    font-stretch: ultra-expanded;
 }
   
