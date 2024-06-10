@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/ulysses-butterfly-1155effb97564974aa0553
 Title: Ulysses Butterfly
 */
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
@@ -17,13 +17,15 @@ const Model = (props) => {
   const tl = useRef(null)
   const group = useRef(null)
 
+  const [ timeScale, setTimeScale ] = useState(0.5);
+
   const { nodes, materials, animations } = useGLTF('/assets/3dmodel/ulysses_butterfly.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
     const action = actions['fly'].play();
-    action.timeScale = 0.35
-  }, [actions])
+    action.timeScale = timeScale;
+  }, [actions, timeScale])
 
   useGSAP(() => {
 
@@ -34,7 +36,8 @@ const Model = (props) => {
         scrollTrigger: {
             trigger: "html",
             start: "top top",
-            scrub: true
+            scrub: true,
+            invalidateOnRefresh: true
         }
     })
     .to(group.current.rotation, {
@@ -56,7 +59,7 @@ const Model = (props) => {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 3.6, 0, 2.7]} scale={[55, 55, 55]} position={[0.3, -0.2, 0]}>
+        <group name="Sketchfab_model" rotation={[-Math.PI / 3.6, 0, 2.7]} scale={props.screenWidth < 768 ? [35, 35, 35] : [60, 60, 60]} position={[0.3, -0.5, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
               <group name="Armature_63" scale={0.03}>
