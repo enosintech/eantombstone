@@ -12,6 +12,13 @@ import grief from "/assets/images/grief.webp";
 import makululu from "/assets/images/makululu.webp";
 import lastday from "/assets/images/lastday.webp";
 import lastcall from "/assets/images/lastcall.webp";
+import endImg1 from "/assets/images/endImage1.webp";
+import endImg2 from "/assets/images/endImage2.webp";
+import endImg3 from "/assets/images/endImage3.webp";
+import endImg4 from "/assets/images/endImage4.webp";
+import endImg5 from "/assets/images/endImage5.webp";
+import endImg6 from "/assets/images/endImage6.webp";
+import endImg7 from "/assets/images/endImage7.webp";
 
 export const heroVideoMain = heroVideoBg; 
 
@@ -27,4 +34,11 @@ export const griefImg = grief;
 export const makululuImg = makululu;
 export const lastDayImg = lastday;
 export const lastCallImg = lastcall;
+export const endImage1 = endImg1;
+export const endImage2 = endImg2;
+export const endImage3 = endImg3;
+export const endImage4 = endImg4;
+export const endImage5 = endImg5;
+export const endImage6 = endImg6;
+export const endImage7 = endImg7;
 

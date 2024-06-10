@@ -56,8 +56,9 @@ const Hero = () => {
             scrollTrigger: {
                 trigger: hero.current,
                 pin: true,
-                end: () => "+=" + (hero.current.offsetHeight * 8),
+                end: () => "+=" + hero.current.offsetHeight * 8,
                 scrub: true,
+                pinSpacing: true,
             }
         })
 
