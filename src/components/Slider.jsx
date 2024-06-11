@@ -63,17 +63,17 @@ const Slider = () => {
 
           endImgs.push(endImgs.shift())
 
-          gsap.delayedCall(2, crossFade);
+          gsap.delayedCall(1.5, crossFade);
         }
 
-        gsap.delayedCall(0, crossFade);
+        gsap.delayedCall(1.5, crossFade);
 
     }, [])
 
   return (
     <div className="overflow-x-hidden">
-        <div ref={slider} className="h-[100vh] w-[400vw] flex flex-wrap relative">
-          <section className="panel w-[100vw] h-[100vh] flex md:flex-row flex-col py-6 px-2">
+        <div ref={slider} className="h-[100lvh] w-[400lvw] flex flex-wrap relative">
+          <section className="panel w-[100lvw] h-[100lvh] flex md:flex-row flex-col py-6 px-2">
             <div className='md:w-1/2 md:h-full w-full h-1/2'>
               <div className='rounded-[10px] overflow-hidden h-full w-full md:w-[75%] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img src={griefImg} className="w-full h-full object-cover" alt="a image about grief"/>
@@ -82,12 +82,12 @@ const Slider = () => {
             <div className='md:w-1/2 md:h-full w-full h-1/2 relative'>
               <p className='text-xl font-light tracking-tight absolute top-5 left-5'>INDEX</p>
               <p className='absolute top-2 right-5 text-7xl font-semibold tracking-tight'>01</p>
-              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[90%] lg:w-[80%] 2xl:w-[65%] h-[55%] md:h-[30%] lg:h-[35%] flex flex-col'>
+              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[90%] lg:w-[80%] 2xl:w-[65%] h-[75%] md:h-[45%] lg:h-[55%] flex flex-col'>
                 <p className='w-full h-[15%] flex items-center justify-end px-2 text-lg lg:text-xl font-extrabold tracking-tight'>
                   The Wanting Machine
                 </p>
                 <p className='w-full h-[70%] font-light tracking-tight text-[14px] lg:text-[18px] text-justify'>
-                  All the literature and friends told a lie when they said to me that this too shall pass; Time supposed to heal all wounds, and I believe it does. But losing to death does not cause a wound. I have never broken my leg or any vital bones, but if I did, I would want healing to mean I am able to walk again. I would want healing to feel like I never broke a single bone to begin with.
+                  All the literature and friends told a lie when they said to me that this too shall pass; They say time heals all wounds, and I still believe in time. But a wound caused by death itches every now and then and in a way that gives you the sense it might go on forever — I have never broken my leg or any vital bones, but if I did, I would want healing to mean I am able to walk again. I would want healing to feel like I never broke a single bone to begin with.
                 </p>
                 <div className='w-full h-[15%] flex items-center justify-end px-2'>
                   <img src={arrowImg} className="size-12" />
@@ -95,25 +95,25 @@ const Slider = () => {
               </div>
             </div>
           </section>
-          <section className="panel panelGrow w-[100vw] h-[100vh] flex md:flex-row flex-col py-7 px-3">
+          <section className="panel panelGrow w-[100lvw] h-[100lvh] flex md:flex-row flex-col py-7 px-3">
             <div className='md:w-[60%] md:h-full w-full h-[60%]'>
               <div className='rounded-[10px] overflow-hidden h-full w-full shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img className='makululu scale-[2] w-full h-full object-cover' src={makululuImg} alt="family in makululu"/>
               </div>
             </div>
             <div className='md:w-[40%] md:h-full w-full h-[40%] relative'>
-              <p className='absolute top-2 right-5 text-7xl font-semibold tracking-tight'>02</p>
-              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[80%] lg:w-[80%] 2xl:w-[65%] h-[65%] md:h-[40%] lg:h-[45%] flex flex-col'>
-                <p className='w-full h-[15%] flex items-center justify-end gap-x-1 px-2 text-lg md:text-[16px] lg:text-xl font-extrabold tracking-tight'>
+              <p className='absolute top-2 right-5 text-5xl sm:text-7xl font-semibold tracking-tight'>02</p>
+              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[90%] lg:w-[80%] 2xl:w-[65%] h-[75%] sm:h-[65%] md:h-[55%] lg:h-[65%] xl:h-[55%] 2xl:h-[50%] flex flex-col'>
+                <p className='w-full h-[15%] flex items-center justify-end gap-x-1 px-2 text-[16px] sm:text-lg md:text-[16px] lg:text-xl font-extrabold tracking-tight'>
                   The Wanting Machine<span className='italic font-light'> ( contd.)</span>
                 </p>
-                <p className='w-full h-[70%] font-light tracking-tight text-[14px] lg:text-[18px] text-justify'>
-                  Dear Dad, your seat at the dinner table remains unoccupied. This must be grief; Sometimes when doing my laundry I come across the dashiki you left me and think to myself why I wear anything else. This must be grief as well; On the day you died I could reason. The old and sick deserve to rest. It was easy to accept then. But today I must say, the scab is uglier than the wound. 
+                <p className='w-full h-[80%] sm:h-[70%] font-light tracking-tight text-[12px] sm:text-[14px] lg:text-[18px] text-justify'>
+                  Sometimes when doing my laundry I come across the dashiki my father left me and think to myself why I wear anything else. This must be grief; How on the day you died I could reason quite clearly. The old and sick deserve the rest so it was easy to accept then. But the scab is uglier than the wound. It took me two months to visit his grave once I got back home. I believed because I never attended his funeral that I never saw him dead yet. That way I could pretend he simply went on an adventure. He was my schrodingers cat.
                 </p>
               </div>
             </div>
           </section>
-          <section className="panel w-[100vw] h-[100vh] flex md:flex-row flex-col py-7 px-3">
+          <section className="panel w-[100lvw] h-[100lvh] flex md:flex-row flex-col py-7 px-3">
             <div className='md:w-[60%] md:h-full w-full h-[60%] flex items-center justify-evenly'>
               <div className='rounded-[10px] overflow-hidden h-full w-[45%] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img className='splitImg w-full h-full object-cover scale-[1.5]' src={lastDayImg} alt="last day i saw my father"/>
@@ -123,17 +123,17 @@ const Slider = () => {
               </div>
             </div>
             <div className='md:w-[40%] md:h-full w-full h-[40%] relative'>
-              <p className='absolute top-2 right-5 text-7xl font-semibold tracking-tight'>03</p>
-              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[80%] lg:w-[80%] 2xl:w-[65%] h-[65%] md:h-[40%] lg:h-[45%] flex flex-col'>
-                <p className='w-full h-[15%] flex items-center justify-end gap-x-1 px-2 text-lg md:text-[16px] lg:text-xl font-extrabold tracking-tight'>
+              <p className='absolute top-2 right-5 text-5xl sm:text-7xl font-semibold tracking-tight'>03</p>
+              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[90%] lg:w-[80%] 2xl:w-[65%] h-[75%] sm:h-[65%] md:h-[60%] lg:h-[55%] flex flex-col'>
+                <p className='w-full h-[15%] flex items-center justify-end gap-x-1 px-2 text-[16px] sm:text-lg md:text-[16px] lg:text-xl font-extrabold tracking-tight'>
                   The Wanting Machine<span className='italic font-light'> ( contd.)</span>
                 </p>
-                <p className='w-full h-[70%] font-light tracking-tight text-[14px] lg:text-[18px] text-justify'>
-                  And so forget about getting better. I fear I may never be myself again. I might go on and do amazing things for my life and the world, might. But I will never be okay about my father. He is <em className='font-bold'>gone</em> and the only thing that makes it okay again is him not being <em className='font-bold'>gone.</em> — So tell me things will get better. I will believe you entirely. In fact, they have. I have moved on, but only from the funeral. I will never move on from his absence. I do not know what that means. </p>
+                <p className='w-full h-[80%] font-light tracking-tight text-[12px] sm:text-[14px] lg:text-[18px] text-justify'>
+                  And so forget about getting better, I fear I may not ever even be myself again. I might go on and do amazing things for my life and the world, might. But I will never be okay about my father. He is <em className='font-bold'>gone</em> and the only thing that makes it okay again is him not being <em className='font-bold'>gone</em>. — You can go ahead and promise me things will get better. I will believe you entirely. In fact, they have. I have moved on, but only from the funeral. I will never move on from his absence. I do not know what that means. </p>
               </div>
             </div>
           </section>
-          <section className="panel w-[100vw] h-[100vh] flex md:flex-row flex-col py-7 px-3">
+          <section className="panel w-[100lvw] h-[100lvh] flex md:flex-row flex-col py-7 px-3">
             <div className='md:w-1/2 md:h-full w-full h-1/2'>
               <div className='rounded-[10px] overflow-hidden relative h-full md:w-[75%] w-full shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img className='absolute top-0 left-0 z-[5] w-full h-full object-cover motiv' src={endImage1} alt="picture of my father" />
@@ -148,10 +148,11 @@ const Slider = () => {
             <div className='md:w-1/2 md:h-full w-full h-1/2 relative'>
               <p className='text-xl font-black tracking-tight absolute top-5 left-5'>END</p>
               <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[90%] lg:w-[80%] 2xl:w-[65%] h-[55%] md:h-[30%] lg:h-[35%] flex flex-col justify-evenly'>
-                <p className='w-full h-[70%] font-light tracking-tight text-[14px] lg:text-[18px]` text-justify'>
-                  In a letter to Santa I'd ask for my father and proceed to be a good boy for three lifetimes.
+                <p className='w-full h-fit font-light tracking-tight text-[10px] sm:text-[14px] lg:text-[18px] text-justify'>
+                   Dear Dad. I still scratch until it bleeds again. Your seat at the dinner table remains unoccupied. In a letter to Santa I'd ask for my father and proceed to be a good boy for three lifetimes. This must be grief, still.
                 </p>
-                <a className='text-[14px] font-bold tracking-tight'>READ THIS IF YOU HAD TO LOSE A PARENT AS AN ADULT</a>
+                <p className='w-full h-fit font-light tracking-tight text-[10px] sm:text-[14px] lg:text-[18px] text-justify'>Dear Dad, I'm like machine now. What I want is for you to be back. And what I want I can never have. And so I will always long. Never truly satisfied. </p>
+                <a href='https://medium.com/illumination/read-this-if-youve-had-to-lose-a-parent-as-an-adult-6f84758df506' target="_blank" className='text-[12px] sm:text-[14px] md:text-[16px] lg:text-lg 2xl: text-xl text-red-700 font-bold tracking-tight hover:opacity-75 active:opacity-50'>READ THIS IF YOU HAD TO LOSE A PARENT AS AN ADULT</a>
               </div>
             </div>
           </section>

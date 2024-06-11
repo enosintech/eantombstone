@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/ulysses-butterfly-1155effb97564974aa0553
 Title: Ulysses Butterfly
 */
 
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
@@ -17,15 +17,13 @@ const Model = (props) => {
   const tl = useRef(null)
   const group = useRef(null)
 
-  const [ timeScale, setTimeScale ] = useState(0.5);
-
   const { nodes, materials, animations } = useGLTF('/assets/3dmodel/ulysses_butterfly.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
     const action = actions['fly'].play();
-    action.timeScale = timeScale;
-  }, [actions, timeScale])
+    action.timeScale = 0.6;
+  }, [actions])
 
   useGSAP(() => {
 
@@ -36,6 +34,7 @@ const Model = (props) => {
         scrollTrigger: {
             trigger: "html",
             start: "top top",
+            end: () => "+=" + 2000 + "vh",
             scrub: true,
             invalidateOnRefresh: true
         }
@@ -53,6 +52,12 @@ const Model = (props) => {
     .to(group.current.position, {
         x: 0.2,
     }, "<")
+
+    .to(group.current.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+    })
     
   }, [])
 
