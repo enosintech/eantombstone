@@ -8,22 +8,31 @@ Title: Ulysses Butterfly
 
 import { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useGSAP } from '@gsap/react'
+import { useLenis } from "@studio-freight/react-lenis";
 import gsap from 'gsap'
 
 const Model = (props) => {
 
+  const lenis = useLenis()
+
   const tl = useRef(null)
   const group = useRef(null)
+
+  const [ timeScale, setTimeScale ] = useState(false);
 
   const { nodes, materials, animations } = useGLTF('/assets/3dmodel/ulysses_butterfly.glb')
   const { actions } = useAnimations(animations, group)
 
+  lenis.on("scroll", () => {
+    setTimeScale(lenis.isScrolling)
+  })
+
   useEffect(() => {
     const action = actions['fly'].play();
-    action.timeScale = 0.6;
-  }, [actions])
+    action.timeScale = timeScale ? 1.5 : 0.3;
+  }, [actions, timeScale])
 
   useGSAP(() => {
 

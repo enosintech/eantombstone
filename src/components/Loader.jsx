@@ -6,7 +6,7 @@ const Loader = () => {
 
   return (
     <Html>
-        <div className="text-center">
+        <div className="w-full h-full flex flex-col items-center justify-center">
             <p className="text-xl font-black tracking-tight">LOADING...</p>
             <p 
                 style={{

@@ -14,6 +14,7 @@ import Loader from "./Loader";
 const Hero = () => {
     const hero = useRef(null);
     const grow = useRef(null);
+    const video = useRef(null);
 
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
 
@@ -37,9 +38,9 @@ const Hero = () => {
         
         SplitType.create(".singleText", {types: "chars"});
 
-        const splitText = gsap.utils.toArray(".singleText .char")
-
-        const scaleImgs = gsap.utils.toArray(".scaleImage");
+        const splitText = gsap.utils.toArray(".singleText .char");
+        const scaleImgs = gsap.utils.toArray(".scaleImage");   
+        const languageText = gsap.utils.toArray(".language");
 
         noTriggerToAnimations("#scrollprompt", {
             y: 0,
@@ -60,6 +61,9 @@ const Hero = () => {
                 end: () => "+=" + hero.current.offsetHeight * 10,
                 scrub: true,
                 pinSpacing: true,
+                onUpdate: () => {
+                    video.current.play();
+                }
             }
         })
 
@@ -283,12 +287,26 @@ const Hero = () => {
         tl.to(".waterText", {
             opacity: 1,
         })
+
+        gsap.set(languageText[0], { autoAlpha: 1 })
+
+        const crossFade = () => {
+          gsap.timeline()
+          .to(languageText[0], {autoAlpha: 0, duration: 0.8})
+          .to(languageText[1], {autoAlpha: 1, duration: 0.8}, 0)
+
+          languageText.push(languageText.shift())
+
+          gsap.delayedCall(1.5, crossFade);
+        }
+
+        gsap.delayedCall(1.5, crossFade);
       
     }, [])
 
   return (
-    <div ref={hero} className="h-[100lvh] w-full relative">
-        <div id="altBack1" className="absolute opacity-0 w-[100vw] h-[100lvh] top-0 left-0 flex md:flex-row flex-col">
+    <div ref={hero} className="h-[100vh] w-full relative">
+        <div id="altBack1" className="absolute opacity-0 w-[100vw] h-[100vh] top-0 left-0 flex md:flex-row flex-col">
             <div ref={grow} className="w-full md:w-1/2 h-0 relative overflow-hidden">
                     <div className="absolute z-[6] bottom-5 left-5 flex flex-col text-white saidText1">
                         <p className="font-extrabold tracking-tight text-2xl sm:text-4xl md:text-2xl lg:text-4xl">MOM AND DAD THRIVING</p>
@@ -307,19 +325,19 @@ const Hero = () => {
                         <p className="font-light tracking-tight text-lg sm:text-xl md:text-lg lg:text-xl">LONG AGO</p>
                     </div>
                 <div className="first w-full h-full absolute top-0 left-0 z-[5] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                    <img className="scaleImage w-full h-[50lvh] md:h-[100lvh] object-cover object-top absolute top-0 left-0" src={mainEnosImg1} alt="pic of my father"/>
+                    <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg1} alt="pic of my father"/>
                 </div>
                 <div className="second w-full h-full absolute top-0 left-0 z-[4] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                    <img className="scaleImage w-full h-[50lvh] md:h-[100lvh] object-cover absolute top-0 left-0" src={mainEnosImg2} alt="pic of my father 2"/>
+                    <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover absolute top-0 left-0" src={mainEnosImg2} alt="pic of my father 2"/>
                 </div>
                 <div className="third w-full h-full absolute top-0 left-0 z-[3] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                    <img className="scaleImage w-full h-[50lvh] md:h-[100lvh] object-cover object-top absolute top-0 left-0" src={mainEnosImg3} alt="pic of my father 3"/>
+                    <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg3} alt="pic of my father 3"/>
                 </div>
                 <div className="fourth w-full h-full absolute top-0 left-0 z-[2] overflow-hidden">
-                    <img className="scaleImage w-full h-[50lvh] md:h-[100lvh] object-cover object-top absolute top-0 left-0" src={mainEnosImg4} alt="pic of my father 4"/>
+                    <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg4} alt="pic of my father 4"/>
                 </div>
                 <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center overflow-hidden">
-                    <video key={heroVideoMain} className="w-full h-full object-cover" autoPlay={true} loop={true} playsInline={true} muted={true} >
+                    <video ref={video} key={heroVideoMain} className="w-full h-full object-cover" loop={true} playsInline={true} muted={true} >
                         <source src={heroVideoMain} type="video/mp4" />
                     </video>
                     <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[60%] text-white">
@@ -333,12 +351,12 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div id="altBack" className="md:w-[50lvw] md:h-full w-[100lvw] md:min-w-[50lvw] min-h-[50lvh] h-[50lvh] flex flex-col items-center justify-evenly">
+            <div id="altBack" className="md:w-[50vw] md:h-full w-[100vw] md:min-w-[50vw] min-h-[50vh] h-[50vh] flex flex-col items-center justify-evenly">
                 <div className="w-full h-[20%] md:h-[15%] flex flex-col items-center justify-evenly border-b-2 border-gray-100 text-[18px] md:text-[18px] lg:text-xl xl:text-2xl">
                     <p className="font-slussen">ENOS ARTHUR NSAMBA</p>
                     <p className="font-light tracking-tight">SURVIVED 79 YEARS OF EARTH</p>
                 </div>
-                <div className="flex items-center justify-center w-full h-[80%] md:h-[85%]">
+                <div className="flex md:items-center justify-center w-full h-[80%] md:h-[85%]">
                     <div className="w-[85%] sm:w-[75%] lg:w-[85%] h-[80%] md:h-[50%] xl:h-[75%] flex flex-col p-2 mt-4">
                         <div className="w-full h-[10%] relative flex items-center px-1 text-xl lg:text-2xl xl:text-3xl text-black">
                             <p className="saidText1 absolute font-light tracking-tight">My Dad Said</p>
@@ -346,17 +364,17 @@ const Hero = () => {
                             <p className="saidText3 opacity-0 absolute font-light tracking-tight">My Dad Was</p>
                             <p className="saidText4 opacity-0 absolute font-light tracking-tight">My Dad Left</p>
                         </div>
-                        <div className="w-full h-[90%] flex items-end pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl">
+                        <div className="w-full h-[90%] flex items-end pb-10 md:pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl">
                             <p className="absolute saidText1 font-bold tracking-tight text-justify text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
                             <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-justify text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
-                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of not all heroes wear capes. Silently saving the city. When the city was me.</p>
-                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-justify text-neutral-700">An unending turbulence in the lives of all that his existed in. Some days I ask how dare he?</p>
+                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of "not all heroes wear capes". Silently saving the city. When the city was me.</p>
+                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-justify text-neutral-700">A chronic turbulence in the lives of all that his existed in. Some days I ask to myself, "how dare he?"</p>
                         </div>
                     </div>    
                 </div>
             </div>
         </div>
-        <div className="absolute w-[100lvw] h-[100lvh] top-0 left-0 flex flex-col overflow-visible">
+        <div className="absolute w-[100vw] h-[100vh] top-0 left-0 flex flex-col overflow-visible">
             <div className="disappear w-full h-full flex flex-col items-center justify-end relative overflow-visible">
                 <div className="w-full h-full absolute z-[-1] flex items-center justify-center overflow-visible pointer-events-none">
                     <div className="h-full w-full overflow-visible pointer-events-none">
@@ -373,10 +391,17 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="w-full h-full flex items-end justify-center pb-28">
-                    <div className="w-fit h-fit flex flex-col relative">
+                    <div className="w-fit h-fit flex flex-col relative translate-y-3 md:translate-y-10">
                         <p className="w-full text-center font-medium tracking-tight text-xl subtext">IN LOVING MEMORY OF</p>
                         <p className="text-[13vw] md:text-[11vw] lg:text-[10vw] px-2 font-slussen leading-none"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                        <p className="w-full text-center mt-1 font-light tracking-tight text-xl subtext">DEC 43' — JUN 22'</p>
+                        <div className="relative w-full h-[40px] grid place-items-center mt-1 font-light tracking-tight text-xl subtext">
+                            <p className="absolute language">DEC 43' — JUN 22'</p>
+                            <p className="absolute language opacity-0">NALUPALE 43' — GANDAPATI 22'</p>
+                            <p className="absolute language opacity-0">12 月 43 日 — 6 月 22 日</p>
+                            <p className="absolute language opacity-0">DIS 43' — JUN 22'</p>
+                            <p className="absolute language opacity-0">1943 ديسمبر - 2022 يونيو</p>
+                            <p className="absolute language opacity-0">1943 DE DICIEMBRE — 2022 DE JUNIO</p>
+                        </div>
                         <p className="surname absolute w-full text-center opacity-0 bottom-0 font-light tracking-tight text-xl">NSAMBA</p>
                     </div>
                 </div>
