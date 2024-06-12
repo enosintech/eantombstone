@@ -121,13 +121,6 @@ const Hero = () => {
             scale: 1.5,
         }, "<")
 
-        tl.to(".adviceBox1", {
-            xPercent: 0,
-            yPercent: 0,
-            rotate: 0,
-            backgroundColor: "rgb(82,82,82)",
-        }, "<")
-
         tl.to(".first", {
             height: 0,
             ease: "power4.out"
@@ -145,29 +138,11 @@ const Hero = () => {
             scale: 1.5,
         }, "<")
 
-        tl.to(".adviceBox2", {
-            xPercent: 0,
-            yPercent: 0,
-            rotate: 0,
-            backgroundColor: "rgb(82,82,82)",
-        }, "<")
-
         tl.to(".saidText1", {
             opacity: 0,
         }, "<")
 
-        tl.to(".adviceBox1", {
-            xPercent: -10,
-            yPercent: -5,
-            rotate: "-10%",
-            backgroundColor: "black",
-        }, "<")
-
         tl.to(".saidText2", {
-            opacity: 1,
-        }, "<")
-
-        tl.to(".dadSaidText2", {
             opacity: 1,
         }, "<")
 
@@ -184,30 +159,11 @@ const Hero = () => {
             scale: 1.5,
         }, "<")
 
-
-        tl.to(".adviceBox2", {
-            xPercent: 10,
-            yPercent: -5,
-            rotate: "10%",
-            backgroundColor: "black",
-        }, "<")
-
-        tl.to(".adviceBox3", {
-            xPercent: 0,
-            yPercent: 0,
-            rotate: 0,
-            backgroundColor: "rgb(82,82,82)",
-        }, "<")
-
         tl.to(".saidText2", {
             opacity: 0,
         }, "<")
 
         tl.to(".saidText3", {
-            opacity: 1,
-        }, "<")
-
-        tl.to(".dadSaidText3", {
             opacity: 1,
         }, "<")
 
@@ -224,29 +180,11 @@ const Hero = () => {
             scale: 1.5
         }, "<")
 
-        tl.to(".adviceBox3", {
-            xPercent: -15,
-            yPercent: -20,
-            rotate: "15%",
-            backgroundColor: "black",
-        }, "<")
-
-        tl.to(".adviceBox4", {
-            xPercent: 0,
-            yPercent: 0,
-            rotate: 0,
-            backgroundColor: "rgb(82,82,82)",
-        }, "<")
-
         tl.to(".saidText3", {
             opacity: 0,
         }, "<")
 
         tl.to(".saidText4", {
-            opacity: 1,
-        }, "<")
-
-        tl.to(".dadSaidText4", {
             opacity: 1,
         }, "<")
 
@@ -358,13 +296,13 @@ const Hero = () => {
                 </div>
                 <div className="flex md:items-center justify-center w-full h-[80%] md:h-[85%]">
                     <div className="w-[85%] sm:w-[75%] lg:w-[85%] h-[80%] md:h-[50%] lg:h-[75%] flex flex-col p-2 mt-4 bg-red-500=">
-                        <div className="w-full h-[10%] relative flex items-center px-1 text-2xl lg:text-4xl xl:text-5xl text-black font-poppins font-extralight tracking-tight">
+                        <div className="w-full h-[10%] relative flex items-center px-1 text-xl sm:text-2xl lg:text-4xl xl:text-5xl text-black font-poppins font-extralight tracking-tight">
                             <p className="saidText1 absolute">My Dad Said</p>
                             <p className="saidText2 opacity-0 absolute">My Dad Loved</p>
                             <p className="saidText3 opacity-0 absolute">My Dad Was</p>
                             <p className="saidText4 opacity-0 absolute">My Dad Left</p>
                         </div>
-                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl font-poppins">
+                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-poppins">
                             <p className="absolute saidText1 font-bold tracking-tight text-justify text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
                             <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-justify text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
                             <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of 'not all heroes wear capes'. Silently saving the city. When the city was me.</p>
