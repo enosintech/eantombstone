@@ -75,7 +75,7 @@ const Slider = () => {
             <div className='md:w-1/2 md:h-full w-full h-1/2'>
               <div className='rounded-[10px] relative overflow-hidden h-full w-full md:w-[75%] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img src={griefImg} className="w-full h-full object-cover" alt="a image about grief"/>
-                <p className='text-white font-poppins font-light tracking-tight text-[14px] absolute bottom-3 w-full italic text-center'>picture from unsplash</p>
+                <p className='text-white font-poppins font-light tracking-tight text-[14px] absolute bottom-3 w-full italic text-center'>picture from <span className='font-bold'>unsplash</span></p>
               </div>
             </div>
             <div className='md:w-1/2 md:h-full w-full h-1/2 relative'>
@@ -98,7 +98,7 @@ const Slider = () => {
             <div className='md:w-[60%] md:h-full w-full h-1/2'>
               <div className='rounded-[10px] overflow-hidden relative h-full w-full shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
                 <img className='makululu scale-[2] w-full h-full object-cover' src={makululuImg} alt="family in makululu"/>
-                <p className='text-white text-xl font-black font-poppins absolute bottom-3 left-3'>2013 - <span className='font-light tracking-tight'>MAKULULU, KABWE</span></p>
+                <p className='text-white text-xl font-black font-poppins absolute bottom-3 left-3'>2013 - <span className='font-extralight tracking-tight'>MAKULULU, KABWE</span></p>
               </div>
             </div>
             <div className='md:w-[40%] md:h-full w-full h-1/2 relative'>

@@ -5,7 +5,7 @@ import React, { useRef, Suspense, useEffect, useState } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 
-import { boldArrowImg, chevronIcon, heroVideoMain, mainEnosImg1, mainEnosImg2, mainEnosImg3, mainEnosImg4 } from "../lib";
+import { boldArrowImg, chevronIcon, heroVideoMain, mainEnosImg1, mainEnosImg2, mainEnosImg3, mainEnosImg4, videoBgImg } from "../lib";
 import { noTriggerToAnimations } from "../utils/animations";
 import Model from "./Scene";
 import Lights from "./Lights";
@@ -335,7 +335,8 @@ const Hero = () => {
                 <div className="fourth w-full h-full absolute top-0 left-0 z-[2] overflow-hidden">
                     <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg4} alt="pic of my father 4"/>
                 </div>
-                <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center overflow-hidden bg-red-500">
+                <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center overflow-hidden">
+                    <img className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" src={videoBgImg} alt="video background Image"/>
                     <video ref={video} key={heroVideoMain} className="w-full h-full object-cover" loop={true} playsInline={true} muted={true} >
                         <source src={heroVideoMain} type="video/mp4" />
                     </video>

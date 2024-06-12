@@ -19,6 +19,7 @@ import endImg4 from "/assets/images/endImage4.webp";
 import endImg5 from "/assets/images/endImage5.webp";
 import endImg6 from "/assets/images/endImage6.webp";
 import endImg7 from "/assets/images/endImage7.webp";
+import videoBg from "/assets/images/videoBg.webp";
 
 export const heroVideoMain = heroVideoBg; 
 
@@ -41,4 +42,5 @@ export const endImage4 = endImg4;
 export const endImage5 = endImg5;
 export const endImage6 = endImg6;
 export const endImage7 = endImg7;
+export const videoBgImg = videoBg;
 
