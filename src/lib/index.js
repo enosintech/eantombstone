@@ -3,6 +3,7 @@ import heroVideoBg from "/assets/videos/heroVideoBg.mp4";
 import chevronDownIcon from "/assets/icons/chevron.png";
 import boldArrow from "/assets/icons/boldArrow.webp";
 import arrow from "/assets/icons/arrow.png";
+import heart from "/assets/icons/heartIcon.webp";
 
 import mainenos1 from "/assets/images/mainenos1.webp";
 import mainenos2 from "/assets/images/mainenos2.webp";
@@ -26,6 +27,7 @@ export const heroVideoMain = heroVideoBg;
 export const chevronIcon = chevronDownIcon;
 export const boldArrowImg = boldArrow;
 export const arrowImg = arrow;
+export const heartIcon = heart;
 
 export const mainEnosImg1 = mainenos1;
 export const mainEnosImg2 = mainenos2;
