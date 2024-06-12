@@ -323,23 +323,23 @@ const Hero = () => {
                         <p className="font-extrabold tracking-tight text-2xl sm:text-4xl md:text-2xl lg:text-4xl">WORKING DAD</p>
                         <p className="font-light tracking-tight text-lg sm:text-xl md:text-lg lg:text-xl">LONG AGO</p>
                     </div>
-                <div className="first w-full h-full absolute top-0 left-0 z-[5] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <div className="first w-full h-full absolute top-0 left-0 z-[5] overflow-hidden shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                     <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg1} alt="pic of my father"/>
                 </div>
-                <div className="second w-full h-full absolute top-0 left-0 z-[4] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <div className="second w-full h-full absolute top-0 left-0 z-[4] overflow-hidden shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                     <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover absolute top-0 left-0" src={mainEnosImg2} alt="pic of my father 2"/>
                 </div>
-                <div className="third w-full h-full absolute top-0 left-0 z-[3] overflow-hidden rounded-b-[20px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <div className="third w-full h-full absolute top-0 left-0 z-[3] overflow-hidden shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                     <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg3} alt="pic of my father 3"/>
                 </div>
                 <div className="fourth w-full h-full absolute top-0 left-0 z-[2] overflow-hidden">
                     <img className="scaleImage w-full h-[50vh] md:h-[100vh] object-cover object-top absolute top-0 left-0" src={mainEnosImg4} alt="pic of my father 4"/>
                 </div>
-                <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center overflow-hidden">
+                <div className="fifth w-full h-full absolute top-0 left-0 z-[1] flex items-center justify-center overflow-hidden bg-red-500">
                     <video ref={video} key={heroVideoMain} className="w-full h-full object-cover" loop={true} playsInline={true} muted={true} >
                         <source src={heroVideoMain} type="video/mp4" />
                     </video>
-                    <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[60%] text-white">
+                    <div className="flex flex-col gap-y-5 waterText opacity-0 absolute w-[60%] text-white font-poppins">
                         <p className="tracking-tight font-extralight text-[10px] sm:text-[14px] lg:text-xl">Excerpt from: <em className="font-semibold">Because I could not stop for death, He kindly stopped for me </em> by Emily Dickinson</p>
                         <p className="text-2xl md:text-3xl xl:text-5xl font-bold tracking-tight text-justify">
                             Because I could not stop for Death –
