@@ -31,7 +31,7 @@ const Model = (props) => {
 
   useEffect(() => {
     const action = actions['fly'].play();
-    action.timeScale = timeScale ? 1.5 : 0.3;
+    action.timeScale = timeScale ? 1 : 0.1;
   }, [actions, timeScale])
 
   useGSAP(() => {

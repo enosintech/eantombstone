@@ -60,7 +60,6 @@ const Hero = () => {
                 pin: true,
                 end: () => "+=" + hero.current.offsetHeight * 10,
                 scrub: true,
-                pinSpacing: true,
                 onUpdate: () => {
                     video.current.play();
                 }
@@ -358,17 +357,17 @@ const Hero = () => {
                 </div>
                 <div className="flex md:items-center justify-center w-full h-[80%] md:h-[85%]">
                     <div className="w-[85%] sm:w-[75%] lg:w-[85%] h-[80%] md:h-[50%] xl:h-[75%] flex flex-col p-2 mt-4">
-                        <div className="w-full h-[10%] relative flex items-center px-1 text-xl lg:text-2xl xl:text-3xl text-black">
-                            <p className="saidText1 absolute font-light tracking-tight">My Dad Said</p>
-                            <p className="saidText2 opacity-0 absolute font-light tracking-tight">My Dad Loved</p>
-                            <p className="saidText3 opacity-0 absolute font-light tracking-tight">My Dad Was</p>
-                            <p className="saidText4 opacity-0 absolute font-light tracking-tight">My Dad Left</p>
+                        <div className="w-full h-[10%] relative flex items-center px-1 text-xl lg:text-2xl xl:text-5xl text-black font-extralight tracking-tight">
+                            <p className="saidText1 absolute">My Dad Said</p>
+                            <p className="saidText2 opacity-0 absolute">My Dad Loved</p>
+                            <p className="saidText3 opacity-0 absolute">My Dad Was</p>
+                            <p className="saidText4 opacity-0 absolute">My Dad Left</p>
                         </div>
                         <div className="w-full h-[90%] flex items-end pb-10 md:pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl">
                             <p className="absolute saidText1 font-bold tracking-tight text-justify text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
                             <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-justify text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
-                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of "not all heroes wear capes". Silently saving the city. When the city was me.</p>
-                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-justify text-neutral-700">A chronic turbulence in the lives of all that his existed in. Some days I ask to myself, "how dare he?"</p>
+                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of 'not all heroes wear capes'. Silently saving the city. When the city was me.</p>
+                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-justify text-neutral-700">A chronic turbulence in the lives of all that his existed in. Some days I think to myself, 'how dare he?'</p>
                         </div>
                     </div>    
                 </div>
