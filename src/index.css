@@ -3,36 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Lausanne;
-    src: url(/assets/fonts/Lausanne-Regular.otf);
-}
-
-@font-face {
-    font-family: NohemiBlack;
-    src: url(/assets/fonts/Nohemi-Black.ttf);
-}
-
-@font-face {
-    font-family: NohemiThin;
-    src: url(/assets/fonts/Nohemi-Thin.ttf);
-}
-
-@font-face {
-    font-family: UniversLight;
-    src: url(/assets/fonts/UniversLight.ttf);
-}
-
-@font-face {
-    font-family: UniversRegular;
-    src: url(/assets/fonts/UniversRegular.ttf);
-}
-
-@font-face {
-    font-family: UniversBold;
-    src: url(/assets/fonts/UniversBold.ttf);
-}
-
-@font-face {
     font-family: slussen;
     src: url(/assets/fonts/SlussenExpandedBlack.otf);
 }

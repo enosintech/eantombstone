@@ -302,11 +302,11 @@ const Hero = () => {
                             <p className="saidText3 opacity-0 absolute">My Dad Was</p>
                             <p className="saidText4 opacity-0 absolute">My Dad Left</p>
                         </div>
-                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-poppins">
-                            <p className="absolute saidText1 font-bold tracking-tight text-justify text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
-                            <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-justify text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
-                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of 'not all heroes wear capes'. Silently saving the city. When the city was me.</p>
-                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-justify text-neutral-700">A chronic turbulence in the lives of all that his existed in. Some days I think to myself, 'how dare he?'</p>
+                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-2xl sm:text-3xl lg:text-5xl 2xl:text-6xl font-poppins text-left">
+                            <p className="absolute saidText1 font-bold tracking-tight text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
+                            <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
+                            <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-neutral-700">The personification of 'not all heroes wear capes'. Silently saving the city. When the city was me.</p>
+                            <p className="absolute saidText4 opacity-0 font-bold tracking-tight text-neutral-700">A chronic turbulence in the lives of all that his existed in. Some days I think to myself, 'how dare he?'</p>
                         </div>
                     </div>    
                 </div>

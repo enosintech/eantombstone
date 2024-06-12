@@ -149,7 +149,7 @@ const Slider = () => {
             </div>
             <div className='md:w-1/2 md:h-full w-full h-1/2 relative'>
               <p className='text-xl font-black tracking-tight absolute top-5 left-5 font-poppins'>END</p>
-              <div className='absolute bottom-0 right-5 w-[85%] sm:w-[75%] md:w-[95%] lg:w-[80%] 2xl:w-[65%] h-[90%] md:h-[60%] lg:h-[60%] flex flex-col justify-evenly'>
+              <div className='absolute bottom-0 lg:bottom-10 right-5 w-[85%] sm:w-[75%] md:w-[95%] lg:w-[80%] 2xl:w-[65%] h-[90%] md:h-[60%] lg:h-[60%] flex flex-col justify-evenly'>
                 <p className='w-full h-fit font-poppins font-thin italic tracking-tight text-[10px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-xl text-justify'>
                    (I will never forget how dissapointing it felt to find out that stars died. Once when I was 6, my father, my brother and I took a walk back home from vespers. I must have counted to a 100 stars over and over the entire walk. I don't remember much about the weather, but it was a wednesday evening and in the season that got dark quick so it must have been cold; I learn't to count about a year before I got into school — Both numbers and on my father.)
                 </p>
