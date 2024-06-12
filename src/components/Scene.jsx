@@ -13,6 +13,8 @@ import { useGSAP } from '@gsap/react'
 import { useLenis } from "@studio-freight/react-lenis";
 import gsap from 'gsap'
 
+const isTouchDevice = 'ontouchstart' in window;
+
 const Model = (props) => {
 
   const lenis = useLenis()
@@ -31,7 +33,7 @@ const Model = (props) => {
 
   useEffect(() => {
     const action = actions['fly'].play();
-    action.timeScale = timeScale ? 1 : 0.1;
+    action.timeScale = timeScale ? 1 : isTouchDevice ? 0.5 : 0.1;
   }, [actions, timeScale])
 
   useGSAP(() => {

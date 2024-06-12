@@ -306,7 +306,7 @@ const Hero = () => {
   return (
     <div ref={hero} className="h-[100vh] w-full relative">
         <div id="altBack1" className="absolute opacity-0 w-[100vw] h-[100vh] top-0 left-0 flex md:flex-row flex-col">
-            <div ref={grow} className="w-full md:w-1/2 h-0 relative overflow-hidden">
+            <div ref={grow} className="w-full md:w-1/2 h-0 relative overflow-hidden font-poppins familyImage">
                     <div className="absolute z-[6] bottom-5 left-5 flex flex-col text-white saidText1">
                         <p className="font-extrabold tracking-tight text-2xl sm:text-4xl md:text-2xl lg:text-4xl">MOM AND DAD THRIVING</p>
                         <p className="font-light tracking-tight text-lg sm:text-xl md:text-lg lg:text-xl">20th September, 2020</p>
@@ -354,17 +354,17 @@ const Hero = () => {
             <div id="altBack" className="md:w-[50vw] md:h-full w-[100vw] md:min-w-[50vw] min-h-[50vh] h-[50vh] flex flex-col items-center justify-evenly">
                 <div className="w-full h-[20%] md:h-[15%] flex flex-col items-center justify-evenly border-b-2 border-gray-100 text-[18px] md:text-[18px] lg:text-xl xl:text-2xl">
                     <p className="font-slussen">ENOS ARTHUR NSAMBA</p>
-                    <p className="font-light tracking-tight">SURVIVED 79 YEARS OF EARTH</p>
+                    <p className="font-light tracking-tight font-poppins">SURVIVED 79 YEARS OF EARTH</p>
                 </div>
                 <div className="flex md:items-center justify-center w-full h-[80%] md:h-[85%]">
-                    <div className="w-[85%] sm:w-[75%] lg:w-[85%] h-[80%] md:h-[50%] xl:h-[75%] flex flex-col p-2 mt-4 bg-red-500=">
-                        <div className="w-full h-[10%] relative flex items-center px-1 text-2xl xl:text-5xl text-black font-extralight tracking-tight bg-yellow-500">
+                    <div className="w-[85%] sm:w-[75%] lg:w-[85%] h-[80%] md:h-[50%] lg:h-[75%] flex flex-col p-2 mt-4 bg-red-500=">
+                        <div className="w-full h-[10%] relative flex items-center px-1 text-2xl lg:text-4xl xl:text-5xl text-black font-poppins font-extralight tracking-tight">
                             <p className="saidText1 absolute">My Dad Said</p>
                             <p className="saidText2 opacity-0 absolute">My Dad Loved</p>
                             <p className="saidText3 opacity-0 absolute">My Dad Was</p>
                             <p className="saidText4 opacity-0 absolute">My Dad Left</p>
                         </div>
-                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl bg-orange-700">
+                        <div className="w-full h-[90%] flex items-end md:pb-4 px-1 relative text-3xl lg:text-5xl xl:text-6xl font-poppins">
                             <p className="absolute saidText1 font-bold tracking-tight text-justify text-neutral-700">Expect other drivers on the road to make a mistake. Practise Hypothesizing your reactions.</p>
                             <p className="absolute saidText2 opacity-0 font-bold tracking-tight text-justify text-neutral-700">Binge watching Nigerian movies - Waking up early to pray - Trying every idea he had, good or bad.</p>
                             <p className="absolute saidText3 opacity-0 font-bold tracking-tight text-justify text-neutral-700">The personification of 'not all heroes wear capes'. Silently saving the city. When the city was me.</p>
@@ -392,9 +392,9 @@ const Hero = () => {
                 </div>
                 <div className="w-full h-full flex items-end justify-center pb-28">
                     <div className="w-fit h-fit flex flex-col relative translate-y-3 md:translate-y-10">
-                        <p className="w-full text-center font-medium tracking-tight text-xl subtext">IN LOVING MEMORY OF</p>
+                        <p className="w-full text-center font-medium tracking-tight text-xl subtext font-poppins">IN LOVING MEMORY OF</p>
                         <p className="text-[13vw] md:text-[11vw] lg:text-[10vw] px-2 font-slussen leading-none"><span className="singleText">ENOS</span> <span className="singleText">SR</span></p>
-                        <div className="relative w-full h-[40px] grid place-items-center mt-1 font-light tracking-tight text-xl subtext">
+                        <div className="relative w-full h-[40px] grid place-items-center mt-1 font-light tracking-tight text-[16px] sm:text-xl subtext font-poppins">
                             <p className="absolute language">DEC 43' — JUN 22'</p>
                             <p className="absolute language opacity-0">NALUPALE 43' — GANDAPATI 22'</p>
                             <p className="absolute language opacity-0">12 月 43 日 — 6 月 22 日</p>
@@ -402,7 +402,7 @@ const Hero = () => {
                             <p className="absolute language opacity-0">1943 ديسمبر - 2022 يونيو</p>
                             <p className="absolute language opacity-0">1943 DE DICIEMBRE — 2022 DE JUNIO</p>
                         </div>
-                        <p className="surname absolute w-full text-center opacity-0 bottom-0 font-light tracking-tight text-xl">NSAMBA</p>
+                        <p className="surname absolute w-full text-center opacity-0 bottom-0 font-poppins font-light tracking-tight text-xl">NSAMBA</p>
                     </div>
                 </div>
             </div>
